@@ -1,15 +1,17 @@
 <script setup lang="ts">
-
-  // const { data } = await useFetch('/api/data')
-  const { body } = await $fetch('/api/log', {
-    method: 'post',
-    body: { test: 123 }
-  })
+const { $supabase } = useNuxtApp();
+const { data: rows, error } = await $supabase.from('users').select('*')
+ console.log(rows);
+ console.log(error);
 </script>
 
 <template>
-<h1>welcome</h1>
-<h3>{{ body }}</h3>
+  <h1>Hello</h1>
+  <div v-if="rows">
+    <ol>
+      <li v-for="user in rows" :key="user.id">{{ user.last_name }} {{ user.first_name }}</li>
+    </ol>
+  </div>
 </template>
 
 <style scoped>
