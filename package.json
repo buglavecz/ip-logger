@@ -12,7 +12,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/eslint": "1.0.1",
     "@supabase/supabase-js": "^2.48.1",
     "nuxt": "^3.15.4",
     "vue": "latest",
@@ -20,7 +19,10 @@
   },
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a",
   "devDependencies": {
+    "@nuxt/eslint": "1.0.1",
     "@nuxt/eslint-config": "^1.0.1",
-    "eslint": "^9.20.0"
+    "@vue/language-server": "^2.2.2",
+    "eslint": "^9.20.0",
+    "typescript": "^5.7.3"
   }
 }
